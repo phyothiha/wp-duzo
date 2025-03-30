@@ -1,0 +1,135 @@
+/*!
+Theme Name: duzo
+Theme URI: http://underscores.me/
+Author: duzo
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: duzo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+ /**
+  * This injects Tailwind's component classes and any component classes
+  * registered by plugins.
+  */
+@tailwind components;
+ 
+ /**
+  * This injects Tailwind's utility classes and any utility classes registered
+  * by plugins.
+  */
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: "Poppins", serif;
+        @apply text-xs font-normal md:text-sm md:leading-6 text-neutral-300;
+        /* @apply text-sm font-normal leading-6 bg-neutral-800 text-neutral-300; */
+    }
+}
+
+@layer components {
+    .comp-heading-font {
+        @apply font-serif font-bold leading-snug tracking-wide;
+    }
+    .comp-heading-hero {
+        @apply text-4xl lg:text-6xl;
+    }
+    .comp-heading-h1 {
+        @apply text-3xl md:text-4xl md:leading-snug lg:leading-snug;
+    }
+    .comp-heading-h2 {
+        @apply text-2xl md:text-3xl lg:text-4xl md:leading-snug lg:leading-snug;
+    }
+    .comp-heading-h3 {
+        @apply text-2xl md:text-3xl md:leading-snug lg:leading-snug;
+    }
+    .comp-heading-h4 {
+        @apply text-lg md:leading-snug lg:leading-snug; 
+    }
+    
+    .comp-text-white {
+        @apply text-neutral-100;
+    }
+    .comp-text-gray {
+        @apply text-neutral-300;
+    }
+    .comp-text-black {
+        @apply text-neutral-700;
+    }
+    .comp-text-dark {
+        @apply text-neutral-900;
+    }
+    
+    .comp-bg-white {
+        @apply bg-neutral-100;
+    }
+    .comp-bg-black {
+        @apply bg-neutral-700;
+    }
+    .comp-bg-dark {
+        @apply bg-neutral-900;
+    }
+    
+    .button {
+        @apply px-3 py-2 font-sans font-semibold tracking-wider uppercase md:px-4 md:py-3;
+    }
+    .button-fill {
+        @apply comp-text-black bg-primary;
+    }
+}
+
+/* Global */
+a {
+    @apply inline-block;
+}
+
+img {
+    @apply object-cover object-center w-full h-full;
+}
+
+iframe {
+    @apply w-full h-[350px] lg:h-full;
+}
+
+[x-cloak] { 
+    display: none !important; 
+}
+
+
+.desktop-header #primary-menu .menu-item {
+    @apply button;
+}
+
+.desktop-header #primary-menu .menu-item.current-menu-item {
+    @apply border border-primary;    
+}
+
+.mobile-header-content #primary-menu .menu-item {
+    @apply text-3xl comp-heading-font;
+}
+.mobile-header-content #primary-menu {
+    @apply space-y-8;
+}
+
+/* 4 8 16 32 64 */
+
+/* Mobile Menu */
+
+#primary-mobile-menu .menu-item {
+    @apply text-xl comp-heading-font;
+}
+#primary-mobile-menu {
+    @apply space-y-4;
+}

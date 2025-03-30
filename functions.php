@@ -132,17 +132,21 @@ function duzo_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'duzo_widgets_init' );
+// add_action( 'widgets_init', 'duzo_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function duzo_scripts() {
 	wp_enqueue_style( 'duzo-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'duzo-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'duzo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'duzo-alpinejs', get_template_directory_uri() . '/js/alpinejs-3.14.8.js', array(), _S_VERSION );
 
+	wp_register_script('duzo-alpinejs-defer', get_template_directory_uri() . '/js/alpinejs-3.14.8.js', array(), _S_VERSION, array( 'strategy' => 'defer' ));
+    wp_enqueue_script('duzo-alpinejs-defer');
+
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -176,3 +180,361 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+if (! function_exists( 'static_dataset_menus' )) {
+	function static_dataset_menus() {
+		return [
+			[
+				'id' => 'small-bites',
+				'title' => 'Small Bites',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Edamame',
+						'st' => '',
+						'd' => 'Steamed with sea salt',
+					],
+					[
+						't' => 'Spicy Edamame',
+						'st' => '',
+						'd' => 'Giner, garlic, chili',
+					],
+					[
+						't' => 'Miso Gyoza',
+						'st' => '',
+						'd' => 'Prawn, Chilean seabass,',
+					],
+					[
+						't' => 'Napa Cabbage Salad',
+						'st' => '',
+						'd' => 'White cabbage, carrot, cucumber, wafu',
+					],
+					[
+						't' => 'Duzo Dynamite',
+						'st' => '',
+						'd' => 'Rock shrimp, chili mayonnaise',
+					],
+					[
+						't' => 'Tuna Tataki',
+						'st' => '',
+						'd' => 'Sliced tuna, herbs, homemade ponzu',
+					],
+					[
+						't' => 'Sweet Corn Salad',
+						'st' => '',
+						'd' => 'Sweet corn, pomegranate, Asian vinaigrette',
+					],
+					[
+						't' => 'Mix Green Salad',
+						'st' => '',
+						'd' => 'Mixed leaves, avocado, cherry tomato',
+					],
+					[
+						't' => 'Ebi Tempura',
+						'st' => '',
+						'd' => 'Prawn, tensuyu daikon sauce',
+					],
+					[
+						't' => 'Dim Sum Selection',
+						'st' => '4pcs per basket',
+						'd' => 'Duck dumpling, Cristal prawn dumpling, Chicken Siew Mai, Prawn Siew Mai',
+					],
+				],
+			],
+			[
+				'id' => 'maki-and-sushi',
+				'title' => 'Maki & Sushi',
+				'subtitle' => '6pcs / 2pcs',
+				'dishes' => [
+					[
+						't' => 'Tori Kimchi Maki',
+						'st' => '',
+						'd' => 'Marinated chicken maki with homemade kimchi, spicy mayo',
+					],
+					[
+						't' => 'Crispy Tuna Maki',
+						'st' => '',
+						'd' => 'Spicy tuna, spicy mayo',
+					],
+					[
+						't' => 'Ebi Maki',
+						'st' => '',
+						'd' => 'Prawn & tenkasu, avocado, wasabi mayo',
+					],
+					[
+						't' => 'Avocado Maki',
+						'st' => '',
+						'd' => 'Avocado, cucumber, carrot',
+					],
+					[
+						't' => 'Crispy Kani Maki',
+						'st' => '',
+						'd' => 'Kani, goma unagi sauce',
+					],
+					[
+						't' => 'California Maki',
+						'st' => '',
+						'd' => 'Crab stick, avocado, tobiko',
+					],
+					[
+						't' => 'Beef Maki',
+						'st' => '',
+						'd' => 'Teriyaki beef, cumber, avocado',
+					],
+					[
+						't' => 'Salmon Nigiri',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Tuna Nigiri',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Hamachi Nigiri',
+						'st' => '',
+						'd' => '',
+					],  
+				],
+			],
+			[
+				'id' => 'soup-and-noodle',
+				'title' => 'Soup & Noodle',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Butternut pumpkin Soup',
+						'st' => '',
+						'd' => 'Creamy sweet pumpkin, crispy bread',
+					],
+					[
+						't' => 'Tom Yum Gaung',
+						'st' => '',
+						'd' => 'Thai flavored creamy seafood soup',
+					],
+					[
+						't' => 'Miso Ramen Bowl',
+						'st' => '',
+						'd' => 'Grilled Chicken, miso broth, mushroom, soft egg',
+					],
+					[
+						't' => 'Kimchi Jiggae',
+						'st' => '',
+						'd' => 'Spicy kimchi, chicken, mushroom and tofu',
+					],
+				],
+			],
+			[
+				'id' => 'wok-special',
+				'title' => 'Wok Special',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Ramen Noodle',
+						'st' => '',
+						'd' => 'Mushroom, bak choi, crunchy tenkasu',
+					],
+					[
+						't' => 'Pad Thai',
+						'st' => '',
+						'd' => 'Prawns, flat noodles, tomato, beansprout',
+					],
+					[
+						't' => 'Japanese Fried Rice',
+						'st' => '',
+						'd' => 'Sticky rice, carrot, baby corn',
+					],
+				],
+			],
+			[
+				'id' => 'robata-and-oven-bake',
+				'title' => 'Robata & Oven Bake',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Jumbo Tiger Prawn',
+						'st' => '',
+						'd' => 'Prawn, Spicy yuzu koshu, lemon',
+					],
+					[
+						't' => 'Chilean Seabass',
+						'st' => '',
+						'd' => 'Seabass, ginger jalapeno dressing, cucumber, carrot',
+					],
+					[
+						't' => 'Whole Seabream',
+						'st' => '',
+						'd' => 'Boneless fish, fennel, capsicum',
+					],
+					[
+						't' => 'Sesame Beef',
+						'st' => '',
+						'd' => 'Tenderloin, spicy sesame dressing',
+					],
+					[
+						't' => 'Salmon Teriyaki',
+						'st' => '',
+						'd' => 'Salmon, kimchi salad',
+					],
+					[
+						't' => 'Beef Skewer',
+						'st' => '',
+						'd' => 'Beef, Teriyaki sauce',
+					],
+					[
+						't' => 'Yakitori',
+						'st' => '',
+						'd' => 'Chicken, yakito sauce',
+					],
+				],
+			],
+			[
+				'id' => 'side-and-extra',
+				'title' => 'Side & Extra',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Button Mushroom',
+						'st' => '',
+						'd' => 'Mushrooms, wafu sesame',
+					],
+					[
+						't' => 'Sweet Potato',
+						'st' => '',
+						'd' => 'Sweet unagi reduction, sesame',
+					],
+					[
+						't' => 'Nasu Miso',
+						'st' => '',
+						'd' => 'Eggplant, sweetened miso',
+					],
+				],
+			],
+			[
+				'id' => 'dessert',
+				'title' => 'Dessert',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Cheesecake',
+						'st' => '',
+						'd' => 'Mixed nuts, berry compote',
+					],
+					[
+						't' => 'Chocolate Fondant',
+						'st' => '',
+						'd' => 'Caramel praline, vanilla ice cream',
+					],
+					[
+						't' => 'Banana Spring roll',
+						'st' => '',
+						'd' => 'Toffee sauce, coconut ice cream',
+					],
+					[
+						't' => 'Sticky Toffee Pudding',
+						'st' => '',
+						'd' => 'Date caramel, toffee sauce, vanilla ice cream',
+					],
+				],
+			],
+			[
+				'id' => 'duzo-drinks',
+				'title' => 'Duzo Drinks',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Duzo Passion',
+						'st' => '',
+						'd' => 'Passionfruit, mint, orange, lime',
+					],
+					[
+						't' => 'Virgin Espresso Martini',
+						'st' => '',
+						'd' => 'Double shot espresso, cream, orange syrup',
+					],
+					[
+						't' => 'Duzo Colada',
+						'st' => '',
+						'd' => 'Pineapple, coconut cream, Orange, Lime',
+					],
+					[
+						't' => 'Duzo Iced tea',
+						'st' => '',
+						'd' => 'Brewed tea, passionfruit, lime',
+					],
+					[
+						't' => 'Matcha Iced Tea',
+						'st' => '',
+						'd' => 'Matcha tea powder, cream base, honey syrup',
+					],
+				],
+			],
+			[
+				'id' => 'coffee',
+				'title' => 'Coffee',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Flat White',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Cappuccino',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Espresso',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Late',
+						'st' => '',
+						'd' => '',
+					],
+				],
+			],
+			[
+				'id' => 'other-drinks',
+				'title' => 'Other Drinks',
+				'subtitle' => '',
+				'dishes' => [
+					[
+						't' => 'Still Water',
+						'st' => '',
+						'd' => '',
+					],
+					[
+						't' => 'Sparkling Water',
+						'st' => '',
+						'd' => '',
+					],
+				],
+			],
+		];
+	}
+}
+
+if (! function_exists( 'static_dataset_healthy_facts' )) {
+	function static_dataset_healthy_facts() {
+		return [
+			[
+				'title' => 'Fresh Ingredients',
+				'description' => 'Authentic, fresh, naturally healthy, and affordable',
+				'icon' => 'content-icon-home-2-512x512.png',
+			],
+			[
+				'title' => 'Healthy Meals',
+				'description' => 'Many dishes cooked in broth or water instead of oil.',
+				'icon' => 'content-icon-home-1-512x512.png',
+			],
+			[
+				'title' => 'Mediterranean Taste',
+				'description' => 'Variety of naturally healthy paleo, vegan, keto, dairy-free and gluten-free dishes',
+				'icon' => 'content-icon-home-3-512x512.png',
+			],
+		];
+	}
+}
