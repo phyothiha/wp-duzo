@@ -199,9 +199,15 @@ $healthy_facts = static_dataset_healthy_facts();
                                 
                                 <li class="space-y-1.5">
                                     <div>
-                                        <h4 class="font-semibold comp-heading-h4 text-primary">
-                                            <?php echo $dish['t']; ?>
-                                        </h4>
+                                        <div class="flex flex-col justify-between gap-y-1 md:gap-y-0 md:items-center md:flex-row comp-heading-h4">
+                                            <h4 class="font-semibold text-primary">
+                                                <?php echo $dish['t']; ?>
+                                            </h4>
+                                            
+                                            <span class="font-bold text-white">
+                                                <?php echo $dish['price']; ?> AED
+                                            </span>
+                                        </div>
                                         
                                         <?php if ( $dish['st'] ) : ?>
                                         <span class="relative z-10 inline-block text-xs before:block before:-inset-0.5 before:-skew-y-3 before:absolute before:w-full before:bg-tertiary before:h-full before:-z-10 comp-text-black">

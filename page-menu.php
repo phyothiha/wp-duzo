@@ -44,7 +44,7 @@ $menus = static_dataset_menus();
         </div>    
     
         <div class="container">
-            <div class="grid grid-cols-12 gap-y-12">
+            <div class="grid grid-cols-12 gap-y-12 lg:gap-x-12">
                 <?php foreach ($menus as $menu) : ?>
                 <div class="col-span-12 lg:col-span-6 snap-y">
                     <div class="mb-4 lg:mb-8 scroll-mt-48 lg:scroll-mt-56 snap-start" id="<?php echo $menu['id']; ?>">
@@ -64,9 +64,15 @@ $menus = static_dataset_menus();
                         <?php foreach ($menu['dishes'] as $dish) : ?>
                             <li class="space-y-1.5">
                                 <div>
-                                    <h4 class="font-semibold comp-heading-h4">
-                                        <?php echo $dish['t']; ?>
-                                    </h4>
+                                    <div class="flex flex-col justify-between gap-y-1 md:gap-y-0 md:items-center md:flex-row comp-heading-h4">
+                                        <h4 class="font-semibold">
+                                            <?php echo $dish['t']; ?>
+                                        </h4>
+                                        
+                                        <span class="font-bold text-primary">
+                                            <?php echo $dish['price']; ?> AED
+                                        </span>
+                                    </div>
                                     
                                     <?php if ( $dish['st'] ) : ?>
                                     <span class="relative z-10 inline-block text-xs before:block before:-inset-0.5 before:-skew-y-3 before:absolute before:w-full before:bg-tertiary before:h-full before:-z-10">
