@@ -1646,6 +1646,10 @@ iframe {
     margin-top: -4rem;
   }
 
+  .xl\:block {
+    display: block;
+  }
+
   .xl\:w-\[512px\] {
     width: 512px;
   }

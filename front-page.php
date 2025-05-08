@@ -10,7 +10,7 @@ $healthy_facts = static_dataset_healthy_facts();
 
 
     <!-- unsplash -->
-    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/hero-banner-home-1920x1280.jpg'; ?>)"; class="relative w-full h-[400px] lg:h-[700px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
+    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/hero-banner-home-1920x1280-1.jpg'; ?>)"; class="relative w-full h-[400px] lg:h-[700px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
         <div class="absolute left-0 w-full overflow-hidden rotate-180 -bottom-[0.05rem] lg:-bottom-1">
             <svg class="fill-neutral-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,6V0h1000v100L0,6z"></path></svg>	
         </div>
@@ -23,27 +23,27 @@ $healthy_facts = static_dataset_healthy_facts();
                     <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                         <div>
                             <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font">
-                                Welcome
+                                Taste <span class="text-primary">the Best Asian Fusion</span> Dish in Dubai
                             </h2>
                         </div>
                         
-                        <div>
+                        <!-- <div>
                             <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font ">
                                 To
                             </h2>
-                        </div>
+                        </div> -->
                         
-                        <div>
+                        <!-- <div>
                             <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font text-primary">
                                 Duzo
                             </h2>
-                        </div>
+                        </div> -->
                         
                         <div class="my-12 mt-8 lg:mt-12 lg:my-14">
-                            <p class="leading-7 comp-text-white">
-                                Welcome to Duzo Restaurant, where gastronomy meets artistry and every meal is a symphony of flavors. Nestled in the heart of Dubai, our restaurant is a sanctuary for food enthusiasts and culinary adventurers alike.
+                            <p class="leading-7 comp-text-white xl:leading-7 xl:text-base">
+                                Welcome to Duzo — your go-to Asian fusion restaurant in Dubai
                                 <br><br>
-                                At Duzo Restaurant, we believe in crafting exceptional dining experiences that tantalize the taste buds and ignite the senses. Our chefs, true culinary maestros, meticulously curate each dish, blending traditional techniques with innovative twists to present a menu that celebrates the essence of fine dining.
+                                Located in Al Zahia, we serve a variety of delicious dishes of different Asian cuisines like Japanese, Korean, Thai and more. Whether you're dining in or looking for an Instagrammable spot, Duzo is the perfect place to enjoy fine Asian cuisine.
                             </p>
                         </div>
                         
@@ -57,7 +57,7 @@ $healthy_facts = static_dataset_healthy_facts();
                 
                 <div class="col-span-12 lg:col-span-6 xl:-mt-12">
                     <!-- unsplash -->
-                    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/content-image-home-1-1920x2880.jpg'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
+                    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/content-image-home-1-1920x2880-1.jpg'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
                 </div>
             </div>
         </section>
@@ -130,13 +130,13 @@ $healthy_facts = static_dataset_healthy_facts();
                 <div class="col-span-12 md:col-span-6">
                     <div class="mb-4">
                         <h2 class="comp-heading-h2 comp-heading-font comp-text-white">
-                            Our <span class="text-primary">Delicious Menu</span>
+                            Explore Our <span class="text-primary">Flavorful Asian Fusion Menu</span>
                         </h2>
                     </div>
 
                     <div class="mb-8">
-                        <p class="lg:text-base">
-                            A variety of naturally healthy paleo, vegan, keto, dairy-free and gluten-free dishes, with many dishes cooked in broth or water instead of oil.					
+                        <p class="xl:leading-7 xl:text-base">
+                            Discover our chef-curated menu with a twist of innovation and tradition. From Appetizers and Main Courses to Desserts and Drinks, our dishes are made from fresh, high-quality ingredients. Perfect for foodies seeking healthy Asian food in Dubai.					
                         </p>
                     </div>
 

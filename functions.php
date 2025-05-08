@@ -180,6 +180,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function duzo_seo_tags() {
+    
+	if (is_page()) {
+		global $post;
+        $slug = $post->post_name;
+		
+		switch ($slug) {
+			case 'home':
+				echo '<meta name="title" content="Duzo | Best Asian Fusion Restaurant in Dubai & Al Zahia">';
+				echo '<meta name="description" content="Duzo offers healthy, authentic Asian fusion dishes in Al Zahia, Dubai. Dine in with us for different Asian cuisines like Japanese, Korean, Thai and more.">';
+				break;
+			case 'menu':
+				echo '<meta name="title" content="Our Menu | Healthy Asian Food & Drinks">';				
+				echo '<meta name="description" content="Check out Duzo\'s menu featuring noodles, sushi, healthy Asian meals and variety of drinks in Dubai.">';				
+				break;
+			case 'about':
+				echo '<meta name="title" content="About Duzo | Fine Dining Asian Restaurant in Dubai">';				
+				echo '<meta name="description" content="Learn about Duzo\'s passion for Asian cuisine. We blend tradition with modern flavors in the heart of Dubai.">';				
+				break;
+			case 'contact':
+				echo '<meta name="title" content="Contact Duzo | Dine-In Asian Restaurant in Al Zahia, Dubai">';				
+				echo '<meta name="description" content="Find Duzo Restaurant\'s location, contact details, and dine-in hours in Dubai. Visit us in Al Zahia today.">';				
+				break;
+		}
+	}
+    
+}
+add_action( 'wp_head', 'duzo_seo_tags' );
+
 if (! function_exists( 'static_dataset_menus' )) {
 	function static_dataset_menus() {
 		return [
@@ -191,105 +220,147 @@ if (! function_exists( 'static_dataset_menus' )) {
 					[
 						't' => 'Edamame',
 						'st' => '',
-						'd' => 'Steamed with sea salt',
+						'd' => 'steamed with sea salt',
 						'price' => '14',
 					],
 					[
 						't' => 'Spicy Edamame',
 						'st' => '',
-						'd' => 'Giner, garlic, chili',
+						'd' => 'giner, garlic, chili',
 						'price' => '18',
 					],
 					[
 						't' => 'Miso Gyoza',
 						'st' => '',
-						'd' => 'Prawn, Chilean seabass,',
-						'price' => '48',
+						'd' => 'prawn, sweet miso',
+						'price' => '45',
 					],
 					[
-						't' => 'Napa Cabbage Salad',
+						't' => 'Goma Spinach Salad',
 						'st' => '',
-						'd' => 'White cabbage, carrot, cucumber, wafu',
-						'price' => '18',
+						'd' => 'baby spinach, cherry tomato, homemade sesame sauce',
+						'price' => '36',
 					],
 					[
 						't' => 'Duzo Dynamite',
 						'st' => '',
-						'd' => 'Rock shrimp, chili mayonnaise',
-						'price' => '48',
+						'd' => 'rock shrimp, chili mayonnaise',
+						'price' => '52',
 					],
 					[
 						't' => 'Tuna Tataki',
 						'st' => '',
-						'd' => 'Sliced tuna, herbs, homemade ponzu',
-						'price' => '56',
+						'd' => 'seared tuna, herbs, homemade ponzu',
+						'price' => '54',
 					],
 					[
-						't' => 'Sweet Corn Salad',
+						't' => 'Crab and Baby Gem Salad',
 						'st' => '',
-						'd' => 'Sweet corn, pomegranate, Asian vinaigrette',
-						'price' => '39',
+						'd' => 'kani crab, goma dressing, baby gems lettuce, cherry tomato',
+						'price' => '45',
 					],
 					[
-						't' => 'Mix Green Salad',
+						't' => 'Salmon Tartare',
 						'st' => '',
-						'd' => 'Mixed leaves, avocado, cherry tomato',
-						'price' => '39',
+						'd' => 'salmon, wasabi mayo, black tobiko',
+						'price' => '36',
 					],
 					[
 						't' => 'Ebi Tempura',
 						'st' => '',
-						'd' => 'Prawn, tensuyu daikon sauce',
-						'price' => '43',
+						'd' => 'prawn, tensuyu daikon sauce',
+						'price' => '45',
 					],
 					[
 						't' => 'Dim Sum Selection',
-						'st' => '4pcs per basket',
-						'd' => 'Duck dumpling, Cristal prawn dumpling, Chicken Siew Mai, Prawn Siew Mai',
+						'st' => 'CHEF SELECTIONS',
+						'd' => '4pcs per basket',
+						'price' => '36',
+					],
+					[
+						't' => 'Sweet Potatoes Fries',
+						'st' => '',
+						'd' => 'crispy sweet potatoes, spicy mayonnaise',
+						'price' => '18',
+					],
+					[
+						't' => 'Wagyu Beef Cake',
+						'st' => '',
+						'd' => 'minced wagyu, sautéed onion, teriyaki mayonnaise',
 						'price' => '36',
 					],
 				],
 			],
 			[
 				'id' => 'maki-and-sushi',
-				'title' => 'Maki & Sushi',
+				'title' => 'Sushi & Maki',
 				'subtitle' => '6pcs / 2pcs',
 				'dishes' => [
 					[
 						't' => 'Tori Kimchi Maki',
 						'st' => '',
-						'd' => 'Marinated chicken maki with homemade kimchi, spicy mayo',
-						'price' => '43',
+						'd' => 'marinated chicken maki with homemade kimchi, kimchi sauce',
+						'price' => '45',
 					],
 					[
 						't' => 'Crispy Tuna Maki',
 						'st' => '',
-						'd' => 'Spicy tuna, spicy mayo',
-						'price' => '43',
+						'd' => 'spicy tuna, spicy mayo, japanese sweet sauce',
+						'price' => '45',
 					],
 					[
 						't' => 'Ebi Maki',
 						'st' => '',
-						'd' => 'Prawn & tenkasu, avocado, wasabi mayo',
-						'price' => '43',
-					],
-					[
-						't' => 'Avocado Maki',
-						'st' => '',
-						'd' => 'Avocado, cucumber, carrot',
-						'price' => '34',
+						'd' => 'prawn & tenkasu, avocado, spicy mayo',
+						'price' => '45',
 					],
 					[
 						't' => 'Crispy Kani Maki',
 						'st' => '',
-						'd' => 'Kani, goma unagi sauce',
-						'price' => '43',
+						'd' => 'kani crab, goma, spicy mayo,japanese sweet sauce',
+						'price' => '45',
 					],
 					[
 						't' => 'California Maki',
 						'st' => '',
-						'd' => 'Crab stick, avocado, tobiko',
-						'price' => '43',
+						'd' => 'crab stick, avocado, cucumber, tobiko',
+						'price' => '45',
+					],
+					[
+						't' => 'California Hand Roll',
+						'st' => '',
+						'd' => 'crab hand roll, avocado, cucumber, tobiko',
+						'price' => '45',
+					],
+					[
+						't' => 'Hot and Crispy Ebi Maki',
+						'st' => '',
+						'd' => 'crunchy prawn tempura, chipotle mayo',
+						'price' => '45',
+					],
+					[
+						't' => 'Crunchy Mushroom Maki',
+						'st' => '',
+						'd' => 'sautéed shimeji mushroom, japanese mayo',
+						'price' => '36',
+					],
+					[
+						't' => 'Avocado Maki',
+						'st' => '',
+						'd' => '',
+						'price' => '36',
+					],
+					[
+						't' => 'Salmon Avocado Maki',
+						'st' => '',
+						'd' => '',
+						'price' => '45',
+					],
+					[
+						't' => 'Kappa Maki',
+						'st' => '',
+						'd' => '',
+						'price' => '36',
 					],
 					[
 						't' => 'Salmon Nigiri',
@@ -306,32 +377,32 @@ if (! function_exists( 'static_dataset_menus' )) {
 				],
 			],
 			[
-				'id' => 'soup-and-noodle',
-				'title' => 'Soup & Noodle',
+				'id' => 'ramen-special',
+				'title' => 'Ramen Special',
 				'subtitle' => '',
 				'dishes' => [
 					[
-						't' => 'Butternut pumpkin Soup',
-						'st' => '',
-						'd' => 'Creamy sweet pumpkin, crispy bread',
-						'price' => '25',
-					],
-					[
-						't' => 'Tom Yum Gaung',
-						'st' => '',
-						'd' => 'Thai flavored creamy seafood soup',
-						'price' => '45',
-					],
-					[
 						't' => 'Miso Ramen Bowl',
 						'st' => '',
-						'd' => 'Grilled Chicken, miso broth, mushroom, soft egg',
+						'd' => 'grilled chicken, miso broth, mushroom, soft egg',
 						'price' => '54',
 					],
 					[
-						't' => 'Kimchi Jiggae',
+						't' => 'Soyu Ramen',
 						'st' => '',
-						'd' => 'Spicy kimchi, chicken, mushroom and tofu',
+						'd' => 'yakitori, soyu broth, white onion, soft egg',
+						'price' => '54',
+					],
+					[
+						't' => 'Kimchi Ramen',
+						'st' => '',
+						'd' => 'spicy kimchi, chicken, mushroom, tofu',
+						'price' => '54',
+					],
+					[
+						't' => 'Ramen Stir-fried',
+						'st' => '',
+						'd' => 'mushroom, bak choi, crunchy tenkasu',
 						'price' => '54',
 					],
 				],
@@ -342,71 +413,72 @@ if (! function_exists( 'static_dataset_menus' )) {
 				'subtitle' => '',
 				'dishes' => [
 					[
-						't' => 'Ramen Noodle',
-						'st' => '',
-						'd' => 'Mushroom, bak choi, crunchy tenkasu',
-						'price' => '45',
-					],
-					[
 						't' => 'Pad Thai',
 						'st' => '',
-						'd' => 'Prawns, flat noodles, tomato, beansprout',
-						'price' => '45',
+						'd' => 'prawns, flat noodles, tomato, beansprout',
+						'price' => '54',
 					],
 					[
 						't' => 'Japanese Fried Rice',
 						'st' => '',
-						'd' => 'Sticky rice, carrot, baby corn',
-						'price' => '45',
+						'd' => 'sticky rice, carrot, baby corn, furikake',
+						'price' => '54',
+					],
+					[
+						't' => 'Tom Yum Gaung',
+						'st' => '',
+						'd' => 'thai flavored creamy soup with prawns',
+						'price' => '54',
+					],
+					[
+						't' => 'Wagyu Bibimbap',
+						'st' => '',
+						'd' => 'wagyu beef, egg, mushroom, carrot, beansprout, bak choi',
+						'price' => '54',
 					],
 				],
 			],
 			[
 				'id' => 'robata',
-				'title' => 'Robata',
+				'title' => 'Robata Grill',
 				'subtitle' => '',
 				'dishes' => [
 					[
-						't' => 'Jumbo Tiger Prawn',
+						't' => 'Beef Skewer',
 						'st' => '',
-						'd' => 'Prawn, Spicy yuzu koshu, lemon',
-						'price' => '98',
+						'd' => 'beef, teriyaki sauce',
+						'price' => '25',
+					],
+					
+					[
+						't' => 'Yakitori',
+						'st' => '',
+						'd' => 'chicken, yakito sauce',
+						'price' => '25',
 					],
 					[
-						't' => 'Chilean Seabass',
+						't' => 'Jumbo Tiger Prawn',
 						'st' => '',
-						'd' => 'Seabass, ginger jalapeno dressing, cucumber, carrot',
-						'price' => '195',
+						'd' => 'prawn, spicy yuzu, lemon',
+						'price' => '98',
 					],
 					[
 						't' => 'Whole Seabream',
 						'st' => '',
-						'd' => 'Boneless fish, fennel, capsicum',
+						'd' => 'boneless fish, fennel salad',
 						'price' => '98',
-					],
-					[
-						't' => 'Sesame Beef',
-						'st' => '',
-						'd' => 'Tenderloin, spicy sesame dressing',
-						'price' => '195',
 					],
 					[
 						't' => 'Salmon Teriyaki',
 						'st' => '',
-						'd' => 'Salmon, kimchi salad',
+						'd' => 'salmon, kimchi salad',
 						'price' => '98',
 					],
 					[
-						't' => 'Beef Skewer',
+						't' => 'Sesame Beef Tenderloin',
 						'st' => '',
-						'd' => 'Beef, Teriyaki sauce',
-						'price' => '25',
-					],
-					[
-						't' => 'Yakitori',
-						'st' => '',
-						'd' => 'Chicken, yakito sauce',
-						'price' => '25',
+						'd' => 'australian tenderloin, spicy sesame dressing',
+						'price' => '195',
 					],
 				],
 			],
@@ -418,20 +490,32 @@ if (! function_exists( 'static_dataset_menus' )) {
 					[
 						't' => 'Button Mushroom',
 						'st' => '',
-						'd' => 'Mushrooms, wafu sesame',
+						'd' => 'mushrooms, wafu sesame',
 						'price' => '18',
 					],
 					[
 						't' => 'Sweet Potato',
 						'st' => '',
-						'd' => 'Sweet unagi reduction, sesame',
+						'd' => 'japanese sweet sauce , sesame',
 						'price' => '18',
 					],
 					[
 						't' => 'Nasu Miso',
 						'st' => '',
-						'd' => 'Eggplant, sweetened miso',
+						'd' => 'eggplant, sweetened miso',
 						'price' => '18',
+					],
+					[
+						't' => 'Asparagus',
+						'st' => '',
+						'd' => 'jumbo asparagus, furikake',
+						'price' => '27',
+					],
+					[
+						't' => 'Japanese Steam Rice',
+						'st' => '',
+						'd' => '',
+						'price' => '10',
 					],
 				],
 			],
@@ -441,28 +525,28 @@ if (! function_exists( 'static_dataset_menus' )) {
 				'subtitle' => '',
 				'dishes' => [
 					[
-						't' => 'Cheesecake',
+						't' => 'Duzo Cheesecake',
 						'st' => '',
-						'd' => 'Mixed nuts, berry compote',
+						'd' => 'mixed nuts crumble, berry compote',
 						'price' => '45',
 					],
 					[
 						't' => 'Chocolate Fondant',
 						'st' => '',
-						'd' => 'Caramel praline, vanilla ice cream',
+						'd' => 'caramel praline, vanilla ice cream',
 						'price' => '45',
 					],
 					[
 						't' => 'Banana Spring roll',
 						'st' => '',
-						'd' => 'Toffee sauce, coconut ice cream',
-						'price' => '36',
+						'd' => 'toffee sauce, vanilla ice cream',
+						'price' => '45',
 					],
 					[
-						't' => 'Sticky Toffee Pudding',
+						't' => 'Coco Mogo',
 						'st' => '',
-						'd' => 'Date caramel, toffee sauce, vanilla ice cream',
-						'price' => '36',
+						'd' => 'mamenori sweet maki, avocado, mango, coconut puree',
+						'price' => '45',
 					],
 				],
 			],
@@ -474,32 +558,32 @@ if (! function_exists( 'static_dataset_menus' )) {
 					[
 						't' => 'Duzo Passion',
 						'st' => '',
-						'd' => 'Passionfruit, mint, orange, lime',
-						'price' => '16',
-					],
-					[
-						't' => 'Yuzu Iced tea',
-						'st' => '',
-						'd' => 'Brewed tea, passionfruit, lime',
-						'price' => '16',
+						'd' => 'fresh passionfruit, mint & lemon, fresh orange, Fresh green apple,',
+						'price' => '18',
 					],
 					[
 						't' => 'Milky Matcha',
 						'st' => '',
-						'd' => 'Matcha tea powder, Milk base, honey syrup',
-						'price' => '16',
+						'd' => 'matcha powder, milk base, honey syrup',
+						'price' => '18',
 					],
 					[
 						't' => 'Yuzu Margrita',
 						'st' => '',
-						'd' => 'Japanese citrus, honey syrup, salt',
-						'price' => '16',
+						'd' => 'japanese citrus, sugar cane syrup, salt',
+						'price' => '18',
 					],
 					[
 						't' => 'Apple Lady',
 						'st' => '',
-						'd' => 'Fresh Green Apple Juice, Lime, Mint',
-						'price' => '16',
+						'd' => 'fresh green apple juice, lime, mint',
+						'price' => '18',
+					],
+					[
+						't' => 'Duzo Yuzo',
+						'st' => '',
+						'd' => 'fresh passionfruit, yuzu marmalade, yuzu pulps',
+						'price' => '18',
 					],
 				],
 			],
@@ -509,28 +593,46 @@ if (! function_exists( 'static_dataset_menus' )) {
 				'subtitle' => '',
 				'dishes' => [
 					[
-						't' => 'Flat White',
-						'st' => '',
-						'd' => '',
-						'price' => '15',
-					],
-					[
-						't' => 'Cappuccino',
-						'st' => '',
-						'd' => '',
-						'price' => '15',
-					],
-					[
 						't' => 'Espresso',
 						'st' => '',
 						'd' => '',
 						'price' => '15',
 					],
 					[
+						't' => 'Flat White',
+						'st' => '',
+						'd' => '',
+						'price' => '18',
+					],
+					[
+						't' => 'Cappuccino',
+						'st' => '',
+						'd' => '',
+						'price' => '18',
+					],
+					[
 						't' => 'Late',
 						'st' => '',
 						'd' => '',
-						'price' => '15',
+						'price' => '18',
+					],
+					[
+						't' => 'Spanish Latte',
+						'st' => '',
+						'd' => '',
+						'price' => '20',
+					],
+					[
+						't' => 'Matcha Latte',
+						'st' => '',
+						'd' => '',
+						'price' => '20',
+					],
+					[
+						't' => 'Royal Latte on Ice',
+						'st' => '',
+						'd' => '',
+						'price' => '20',
 					],
 				],
 			],
@@ -543,13 +645,13 @@ if (! function_exists( 'static_dataset_menus' )) {
 						't' => 'Green Apple Juice',
 						'st' => '',
 						'd' => '',
-						'price' => '12',
+						'price' => '16',
 					],
 					[
 						't' => 'Orange Juice',
 						'st' => '',
 						'd' => '',
-						'price' => '12',
+						'price' => '16',
 					],
 				],
 			],
@@ -562,43 +664,43 @@ if (! function_exists( 'static_dataset_menus' )) {
 						't' => 'Still Water',
 						'st' => '',
 						'price' => 6,
-						'd' => 'Al Ain 330ml',
+						'd' => '(Al Ain 330ml)',
 					],
 					[
 						't' => 'Still Water',
 						'st' => '',
 						'price' => 12,
-						'd' => 'Al Ain 750ml',
+						'd' => '(Al Ain 750ml)',
 					],
 					[
 						't' => 'Sparkling Water',
 						'st' => '',
 						'price' => 6,
-						'd' => 'Al Ain 330ml',
+						'd' => '(Al Ain 330ml)',
 					],
 					[
 						't' => 'Sparkling Water',
 						'st' => '',
 						'price' => 12,
-						'd' => 'Al Ain 750ml',
+						'd' => '(Al Ain 750ml)',
 					],
 					[
-						't' => 'Original Ginger',
-						'st' => '',
-						'price' => 18,
-						'd' => 'Ale Franklin & Sons 200ml',
-					],
-					[
-						't' => 'Original Lemonade',
-						'st' => '',
-						'price' => 18,
-						'd' => 'Franklin & Sons 200ml',
-					],
-					[
-						't' => 'Organic Coconut Water Drop',
+						't' => 'Original Coconut Water',
 						'st' => '',
 						'price' => 15,
-						'd' => '290ml',
+						'd' => '(290ml)',
+					],
+					[
+						't' => 'Red Bull',
+						'st' => '',
+						'price' => 23,
+						'd' => '(250ml)',
+					],
+					[
+						't' => 'Soft Drinks',
+						'st' => '',
+						'price' => 12,
+						'd' => '',
 					],
 				],
 			],

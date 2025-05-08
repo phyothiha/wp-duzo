@@ -26,27 +26,31 @@ get_header();
                 <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                     <div>
                         <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font">
-                            Where
+                            Your
                         </h2>
                     </div>
                     
                     <div>
                         <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font text-primary">
-                            Taste
+                            Local Asian Fusion
                         </h2>
                     </div>
                     
                     <div>
                         <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font">
-                            Knows
+                            Restaurant
                         </h2>
                     </div>
                     
                     <div class="my-12 mt-8 lg:mt-12 lg:my-14">
-                        <p class="leading-7 text-black">
-                            Welcome to Duzo Restaurant, where gastronomy meets artistry and every meal is a symphony of flavors. Nestled in the heart of Dubai, our restaurant is a sanctuary for food enthusiasts and culinary adventurers alike.
+                        <p class="leading-7 text-black xl:leading-7 xl:text-base">
+                            At Duzo, we believe in blending tradition and creativity to bring the best of Asian flavors to Dubai. 
                             <br><br>
-                            At Duzo Restaurant, we believe in crafting exceptional dining experiences that tantalize the taste buds and ignite the senses. Our chefs, true culinary maestros, meticulously curate each dish, blending traditional techniques with innovative twists to present a menu that celebrates the essence of fine dining.
+                            Launched in April 2025, Duzo was built with a focus on customer satisfaction, exceptional hygiene standards, and top-notch service. Our trained staff and passionate chefs are dedicated to delivering delicious, handcrafted dishes in a cozy, Instagram-worthy atmosphere.
+                            <br><br>
+                            From the moment you step in, you'll be greeted with warm hospitality and flavors that speak for themselves.
+                            <br><br>
+                            Visit us in Al Zahia and discover the passion behind every bite.
                         </p>
                     </div>
                     
