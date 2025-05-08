@@ -188,20 +188,20 @@ function duzo_seo_tags() {
 		
 		switch ($slug) {
 			case 'home':
-				echo '<meta name="title" content="Duzo | Best Asian Fusion Restaurant in Dubai & Al Zahia">';
-				echo '<meta name="description" content="Duzo offers healthy, authentic Asian fusion dishes in Al Zahia, Dubai. Dine in with us for different Asian cuisines like Japanese, Korean, Thai and more.">';
+				echo '<meta name="title" content="Duzo | Best Asian Fusion Restaurant in Dubai & Al Zahia" />';
+				echo '<meta name="description" content="Duzo offers healthy, authentic Asian fusion dishes in Al Zahia, Dubai. Dine in with us for different Asian cuisines like Japanese, Korean, Thai and more." />';
 				break;
 			case 'menu':
-				echo '<meta name="title" content="Our Menu | Healthy Asian Food & Drinks">';				
-				echo '<meta name="description" content="Check out Duzo\'s menu featuring noodles, sushi, healthy Asian meals and variety of drinks in Dubai.">';				
+				echo '<meta name="title" content="Our Menu | Healthy Asian Food & Drinks" />';				
+				echo '<meta name="description" content="Check out Duzo\'s menu featuring noodles, sushi, healthy Asian meals and variety of drinks in Dubai." />';				
 				break;
 			case 'about':
-				echo '<meta name="title" content="About Duzo | Fine Dining Asian Restaurant in Dubai">';				
-				echo '<meta name="description" content="Learn about Duzo\'s passion for Asian cuisine. We blend tradition with modern flavors in the heart of Dubai.">';				
+				echo '<meta name="title" content="About Duzo | Fine Dining Asian Restaurant in Dubai" />';				
+				echo '<meta name="description" content="Learn about Duzo\'s passion for Asian cuisine. We blend tradition with modern flavors in the heart of Dubai." />';				
 				break;
 			case 'contact':
-				echo '<meta name="title" content="Contact Duzo | Dine-In Asian Restaurant in Al Zahia, Dubai">';				
-				echo '<meta name="description" content="Find Duzo Restaurant\'s location, contact details, and dine-in hours in Dubai. Visit us in Al Zahia today.">';				
+				echo '<meta name="title" content="Contact Duzo | Dine-In Asian Restaurant in Al Zahia, Dubai" />';				
+				echo '<meta name="description" content="Find Duzo Restaurant\'s location, contact details, and dine-in hours in Dubai. Visit us in Al Zahia today." />';				
 				break;
 		}
 	}
