@@ -23,7 +23,7 @@ $healthy_facts = static_dataset_healthy_facts();
                     <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                         <div>
                             <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font">
-                                Taste <span class="text-primary">the Best Asian Fusion</span> Dish in Dubai
+                                Taste <span class="text-primary">the Best Asian Contemporary</span> Dish in Dubai
                             </h2>
                         </div>
                         
@@ -41,7 +41,7 @@ $healthy_facts = static_dataset_healthy_facts();
                         
                         <div class="my-12 mt-8 lg:mt-12 lg:my-14">
                             <p class="leading-7 comp-text-white xl:leading-7 xl:text-base">
-                                Welcome to Duzo — your go-to Asian fusion restaurant in Dubai
+                                Welcome to Duzo — your go-to Asian Contemporary restaurant in Dubai
                                 <br><br>
                                 Located in Al Zahia, we serve a variety of delicious dishes of different Asian cuisines like Japanese, Korean, Thai and more. Whether you're dining in or looking for an Instagrammable spot, Duzo is the perfect place to enjoy fine Asian cuisine.
                             </p>
@@ -62,12 +62,12 @@ $healthy_facts = static_dataset_healthy_facts();
             </div>
         </section>
         
-        <section class="container py-8">
-            <div class="grid grid-cols-12 gap-4 md:gap-8 lg:gap-12">
+        <section class="px-8 py-8 md:px-12">
+            <div class="grid grid-cols-12 gap-4 gap-y-12 md:gap-8 md:gap-y-12 lg:gap-12 xl:gap-12">
                 
                 <?php foreach ($healthy_facts as $fact) : ?>
                     
-                    <div class="col-span-12 space-y-4 md:col-span-4">  
+                    <div class="col-span-12 space-y-4 md:col-span-6 lg:gap-12 xl:col-span-3">  
                         <div class="w-12 mx-auto md:w-16">
                             <img src="<?php echo get_template_directory_uri() . '/images/' . $fact['icon']; ?>)">
                         </div>
@@ -78,8 +78,8 @@ $healthy_facts = static_dataset_healthy_facts();
                             </h4>
                         </div>
                         
-                        <div>
-                            <p class="text-xs text-center">
+                        <div class="lg:w-9/12 lg:mx-auto">
+                            <p class="text-xs leading-6 text-center">
                                 <?php echo $fact['description']; ?>
                             </p>
                         </div>
@@ -100,7 +100,7 @@ $healthy_facts = static_dataset_healthy_facts();
                 <div class="col-span-12 lg:col-span-6">
                     <div class="mb-4 md:mb-8 md:pr-16 lg:pr-8 lg:mb-16 md:ml-auto md:w-10/12 lg:w-full">
                         <p class="xl:leading-7 xl:text-base">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias exercitationem aut ab, ullam est quos nesciunt dolor delectus natus, ipsum quibusdam aspernatur asperiores fugiat fuga autem eius quae corporis officia.
+                            At Duzo, we believe great food goes hand in hand with great service. That's why we're committed to delivering not just delicious meals, but also warm hospitality, spotless hygiene, and a welcoming atmosphere. Whether it's your first visit or your tenth, you'll always feel cared for.
                         </p>
                     </div>
 
@@ -118,7 +118,11 @@ $healthy_facts = static_dataset_healthy_facts();
 
                     <div class="md:pl-16 lg:pl-8 md:ml-auto md:w-10/12 lg:w-full">
                         <p class="xl:leading-7 xl:text-base">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias exercitationem aut ab, ullam est quos nesciunt dolor delectus natus, ipsum quibusdam aspernatur asperiores fugiat fuga autem eius quae corporis officia.
+                            Duzo is a place you'll want to come back to—again and again—for the flavors you love, the people who serve you with a smile, and the experience that feels just right.
+                            
+                            <br><br>
+
+                            Duzo — Taste of Asia. Your table is ready.
                         </p>
                     </div>
                 </div>
@@ -130,7 +134,7 @@ $healthy_facts = static_dataset_healthy_facts();
                 <div class="col-span-12 md:col-span-6">
                     <div class="mb-4">
                         <h2 class="comp-heading-h2 comp-heading-font comp-text-white">
-                            Explore Our <span class="text-primary">Flavorful Asian Fusion Menu</span>
+                            Explore Our <span class="text-primary">Flavorful Asian Contemporary Menu</span>
                         </h2>
                     </div>
 

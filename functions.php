@@ -712,19 +712,24 @@ if (! function_exists( 'static_dataset_healthy_facts' )) {
 	function static_dataset_healthy_facts() {
 		return [
 			[
-				'title' => 'Fresh Ingredients',
-				'description' => 'Authentic, fresh, naturally healthy, and affordable',
+				'title' => 'FRESH INGREDIENTS',
+				'description' => 'We use only the freshest, high-quality ingredients to bring authentic Asian flavors to your plate. Each dish is made to order, just the way it should be.',
 				'icon' => 'content-icon-home-2-512x512.png',
 			],
 			[
-				'title' => 'Healthy Meals',
-				'description' => 'Many dishes cooked in broth or water instead of oil.',
+				'title' => 'FLAVORFUL & HEALTHY',
+				'description' => 'At Duzo, flavor meets balance. Many of our dishes are cooked with minimal oil, steamed, or stir-fried—offering delicious options that feel good and taste even better.',
 				'icon' => 'content-icon-home-1-512x512.png',
 			],
 			[
-				'title' => 'Mediterranean Taste',
-				'description' => 'Variety of naturally healthy paleo, vegan, keto, dairy-free and gluten-free dishes',
+				'title' => 'MEDITERRANEAN TASTE',
+				'description' => 'Enjoy a refreshing twist on tradition with our Mediterranean-inspired options. Light, wholesome, and full of natural flavors—perfect for those seeking vegan, keto, paleo, dairy-free, or gluten-free dishes, all with an Asian flair.',
 				'icon' => 'content-icon-home-3-512x512.png',
+			],
+			[
+				'title' => 'CLEAN & COMFORTING',
+				'description' => 'Our kitchen follows the highest hygiene standards, and our team is committed to warm, attentive service. Duzo isn’t just a place to eat—it’s a place to feel at home.',
+				'icon' => 'content-icon-home-4-512x512.png',
 			],
 		];
 	}

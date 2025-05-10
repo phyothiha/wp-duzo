@@ -32,7 +32,7 @@ get_header();
                     
                     <div>
                         <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font text-primary">
-                            Local Asian Fusion
+                            Local Asian Contemporary
                         </h2>
                     </div>
                     

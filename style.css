@@ -891,6 +891,10 @@ body {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
 .grid {
   display: grid;
 }
@@ -970,6 +974,10 @@ body {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-y-1 {
@@ -1106,6 +1114,10 @@ body {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1124,6 +1136,26 @@ body {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .pb-8 {
@@ -1180,6 +1212,10 @@ body {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .text-black {
@@ -1407,6 +1443,10 @@ iframe {
     grid-column: span 6 / span 6;
   }
 
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .md\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -1451,6 +1491,10 @@ iframe {
     row-gap: 0px;
   }
 
+  .md\:gap-y-12 {
+    row-gap: 3rem;
+  }
+
   .md\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1464,6 +1508,11 @@ iframe {
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:pl-16 {
@@ -1491,6 +1540,10 @@ iframe {
 
   .lg\:col-span-6 {
     grid-column: span 6 / span 6;
+  }
+
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .lg\:mx-auto {
@@ -1559,6 +1612,14 @@ iframe {
     width: 100%;
   }
 
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
   .lg\:scroll-mt-56 {
     scroll-margin-top: 14rem;
   }
@@ -1573,6 +1634,14 @@ iframe {
 
   .lg\:gap-4 {
     gap: 1rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:gap-2 {
+    gap: 0.5rem;
   }
 
   .lg\:gap-x-12 {
@@ -1638,6 +1707,15 @@ iframe {
 }
 
 @media (min-width: 1300px) {
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .xl\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .xl\:-mt-12 {
     margin-top: -3rem;
   }
@@ -1652,6 +1730,18 @@ iframe {
 
   .xl\:w-\[512px\] {
     width: 512px;
+  }
+
+  .xl\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .xl\:w-9\/12 {
+    width: 75%;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
   }
 
   .xl\:px-28 {
