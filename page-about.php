@@ -25,20 +25,8 @@ get_header();
             <div class="col-span-12 lg:col-span-6">
                 <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                     <div>
-                        <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font">
-                            Your
-                        </h2>
-                    </div>
-                    
-                    <div>
-                        <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font text-primary">
-                            Local Asian Contemporary
-                        </h2>
-                    </div>
-                    
-                    <div>
-                        <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font">
-                            Restaurant
+                        <h2 class="text-3xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-dark comp-heading-font">
+                            Your <span class="text-primary">Local Asian Contemporary</span> Restaurant
                         </h2>
                     </div>
                     

@@ -22,22 +22,10 @@ $healthy_facts = static_dataset_healthy_facts();
                 <div class="col-span-12 lg:col-span-6">
                     <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                         <div>
-                            <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font">
+                            <h2 class="text-3xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font">
                                 Taste <span class="text-primary">the Best Asian Contemporary</span> Dish in Dubai
                             </h2>
                         </div>
-                        
-                        <!-- <div>
-                            <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font ">
-                                To
-                            </h2>
-                        </div> -->
-                        
-                        <!-- <div>
-                            <h2 class="text-4xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font text-primary">
-                                Duzo
-                            </h2>
-                        </div> -->
                         
                         <div class="my-12 mt-8 lg:mt-12 lg:my-14">
                             <p class="leading-7 comp-text-white xl:leading-7 xl:text-base">
