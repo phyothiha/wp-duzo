@@ -9,16 +9,7 @@ $menus = static_dataset_menus();
 
 ?>
 
-    <!-- unsplash -->
-    <!-- <div style="background-image: url('https://cdn-ilbadjn.nitrocdn.com/pdWbTPTFYdEkdAZOXGfMdLexqObVDkjD/assets/images/optimized/rev-4036da8/vietnamesefoodies.com/wp-content/uploads/2022/10/menu-back.jpg')"; class="relative w-full h-[400px] lg:h-[600px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
-        <div class="container relative z-10 flex items-center justify-center w-full h-full">
-            <h1 class="text-center uppercase text-neutral-100 comp-heading-hero comp-heading-font">
-                Menu
-            </h1>
-        </div>
-    </div> -->
-    
-    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/hero-banner-contact-1920x1279.jpg'; ?>)"; class="relative w-full h-[400px] lg:h-[600px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
+    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/menu-hero-banner-1.png'; ?>)"; class="relative w-full h-[400px] lg:h-[600px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
         <div class="absolute left-0 w-full overflow-hidden rotate-180 -bottom-[0.05rem] lg:-bottom-1">
             <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,6V0h1000v100L0,6z"></path></svg>	
         </div>
@@ -42,7 +33,7 @@ $menus = static_dataset_menus();
                     
                     <div class="my-12 mt-8 lg:mt-12 lg:my-14">
                         <p class="leading-7 text-black xl:leading-7 xl:text-base">
-                            Discover our chef-curated menu with a twist of innovation and tradition. From Appetizers and Main Courses to Desserts and Drinks, our dishes are made from fresh, high-quality ingredients. Perfect for foodies seeking healthy Asian food in Dubai.
+                            Discover our chef-curated menu with a twist of innovation and tradition. From Appetizers and Main Courses to Desserts and Drinks, our dishes are made from fresh, high-quality ingredients. Perfect for foodies seeking healthy Asian food in Sharjah.
                             <br class="hidden xl:block" />
                             <br class="hidden xl:block" />
                             <br class="hidden xl:block" />
@@ -53,8 +44,7 @@ $menus = static_dataset_menus();
             </div>
             
             <div class="col-span-12 lg:col-span-6 xl:-mt-12">
-                <!-- unsplash -->
-                <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/content-image-about-1-1920x2880.jpg'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
+                <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/menu-content-image-1.png'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
             </div>
         </div>
     </section>

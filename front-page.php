@@ -8,9 +8,7 @@ $healthy_facts = static_dataset_healthy_facts();
 
 ?>
 
-
-    <!-- unsplash -->
-    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/hero-banner-home-1920x1280-1.jpg'; ?>)"; class="relative w-full h-[400px] lg:h-[700px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
+    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/home-hero-banner-1.jpg'; ?>)"; class="relative w-full h-[400px] lg:h-[700px] -z-20 bg-center bg-cover bg-no-repeat before:absolute before:top-0 before:left-0 before:bg-neutral-800/60 before:w-full before:h-full before:-z-10">
         <div class="absolute left-0 w-full overflow-hidden rotate-180 -bottom-[0.05rem] lg:-bottom-1">
             <svg class="fill-neutral-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,6V0h1000v100L0,6z"></path></svg>	
         </div>
@@ -23,13 +21,13 @@ $healthy_facts = static_dataset_healthy_facts();
                     <div class="px-6 py-8 text-center md:px-24 lg:px-12 xl:px-28">                    
                         <div>
                             <h2 class="text-3xl leading-snug uppercase md:text-5xl md:leading-snug lg:text-6xl lg:leading-snug comp-text-white comp-heading-font">
-                                Taste <span class="text-primary">the Best Asian Contemporary</span> Dish in Dubai
+                                Taste <span class="text-primary">the Best Asian Contemporary</span> Dish in Sharjah
                             </h2>
                         </div>
                         
                         <div class="my-12 mt-8 lg:mt-12 lg:my-14">
                             <p class="leading-7 comp-text-white xl:leading-7 xl:text-base">
-                                Welcome to Duzo — your go-to Asian Contemporary restaurant in Dubai
+                                Welcome to Duzo — your go-to Asian Contemporary restaurant in Sharjah
                                 <br><br>
                                 Located in Al Zahia, we serve a variety of delicious dishes of different Asian cuisines like Japanese, Korean, Thai and more. Whether you're dining in or looking for an Instagrammable spot, Duzo is the perfect place to enjoy fine Asian cuisine.
                             </p>
@@ -44,18 +42,17 @@ $healthy_facts = static_dataset_healthy_facts();
                 </div>
                 
                 <div class="col-span-12 lg:col-span-6 xl:-mt-12">
-                    <!-- unsplash -->
-                    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/content-image-home-1-1920x2880-1.jpg'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
+                    <div style="background-image: url(<?php echo get_template_directory_uri() . '/images/home-content-image-1.jpg'; ?>)"; class="w-full h-[350px] md:h-[450px] lg:h-full bg-center bg-no-repeat bg-cover"></div>
                 </div>
             </div>
         </section>
         
-        <section class="px-8 py-8 md:px-12">
-            <div class="grid grid-cols-12 gap-4 gap-y-12 md:gap-8 md:gap-y-12 lg:gap-12 xl:gap-12">
+        <section class="container py-8">
+            <div class="grid grid-cols-12 gap-4 md:gap-8 lg:gap-12">
                 
                 <?php foreach ($healthy_facts as $fact) : ?>
                     
-                    <div class="col-span-12 space-y-4 md:col-span-6 lg:gap-12 xl:col-span-3">  
+                    <div class="col-span-12 space-y-4 md:col-span-4">  
                         <div class="w-12 mx-auto md:w-16">
                             <img src="<?php echo get_template_directory_uri() . '/images/' . $fact['icon']; ?>)">
                         </div>
@@ -66,8 +63,8 @@ $healthy_facts = static_dataset_healthy_facts();
                             </h4>
                         </div>
                         
-                        <div class="lg:w-9/12 lg:mx-auto">
-                            <p class="text-xs leading-6 text-center">
+                        <div>
+                            <p class="text-xs text-center">
                                 <?php echo $fact['description']; ?>
                             </p>
                         </div>
@@ -93,15 +90,13 @@ $healthy_facts = static_dataset_healthy_facts();
                     </div>
 
                     <div class="md:w-[384px] xl:w-[512px]">
-                        <!-- unsplash -->
-                        <img src="<?php echo get_template_directory_uri() . '/images/content-image-home-2-1920x2880.jpg'; ?>" />
+                        <img src="<?php echo get_template_directory_uri() . '/images/home-content-image-2.jpg'; ?>" />
                     </div>
                 </div>
                 
                 <div class="col-span-12 lg:col-span-6">
                     <div class="mb-4 md:mb-8 lg:mb-16 md:w-[384px] xl:w-[512px] md:ml-auto">
-                        <!-- unsplash -->
-                        <img src="<?php echo get_template_directory_uri() . '/images/content-image-home-3-1920x2560.jpg'; ?>" />
+                        <img src="<?php echo get_template_directory_uri() . '/images/home-content-image-3.jpg'; ?>" />
                     </div>
 
                     <div class="md:pl-16 lg:pl-8 md:ml-auto md:w-10/12 lg:w-full">
@@ -128,7 +123,7 @@ $healthy_facts = static_dataset_healthy_facts();
 
                     <div class="mb-8">
                         <p class="xl:leading-7 xl:text-base">
-                            Discover our chef-curated menu with a twist of innovation and tradition. From Appetizers and Main Courses to Desserts and Drinks, our dishes are made from fresh, high-quality ingredients. Perfect for foodies seeking healthy Asian food in Dubai.					
+                            Discover our chef-curated menu with a twist of innovation and tradition. From Appetizers and Main Courses to Desserts and Drinks, our dishes are made from fresh, high-quality ingredients. Perfect for foodies seeking healthy Asian food in Sharjah.					
                         </p>
                     </div>
 
@@ -141,8 +136,7 @@ $healthy_facts = static_dataset_healthy_facts();
             
                 <div class="col-span-12 md:col-span-6">
                     <div class="lg:h-[350px] lg:mx-auto">
-                        <!-- unsplash -->
-                        <img src="<?php echo get_template_directory_uri() . '/images/content-image-home-4-1920x1158.jpg'; ?>" />
+                        <img src="<?php echo get_template_directory_uri() . '/images/home-content-image-4.png'; ?>" />
                     </div>
                 </div>
             </div>	

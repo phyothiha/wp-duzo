@@ -188,20 +188,20 @@ function duzo_seo_tags() {
 		
 		switch ($slug) {
 			case 'home':
-				echo '<meta name="title" content="Duzo | Best Asian Fusion Restaurant in Dubai & Al Zahia" />';
-				echo '<meta name="description" content="Duzo offers healthy, authentic Asian fusion dishes in Al Zahia, Dubai. Dine in with us for different Asian cuisines like Japanese, Korean, Thai and more." />';
+				echo '<meta name="title" content="Duzo | Best Asian Fusion Restaurant in Sharjah & Al Zahia" />';
+				echo '<meta name="description" content="Duzo offers healthy, authentic Asian fusion dishes in Al Zahia, Sharjah. Dine in with us for different Asian cuisines like Japanese, Korean, Thai and more." />';
 				break;
 			case 'menu':
 				echo '<meta name="title" content="Our Menu | Healthy Asian Food & Drinks" />';				
-				echo '<meta name="description" content="Check out Duzo\'s menu featuring noodles, sushi, healthy Asian meals and variety of drinks in Dubai." />';				
+				echo '<meta name="description" content="Check out Duzo\'s menu featuring noodles, sushi, healthy Asian meals and variety of drinks in Sharjah." />';				
 				break;
 			case 'about':
-				echo '<meta name="title" content="About Duzo | Fine Dining Asian Restaurant in Dubai" />';				
-				echo '<meta name="description" content="Learn about Duzo\'s passion for Asian cuisine. We blend tradition with modern flavors in the heart of Dubai." />';				
+				echo '<meta name="title" content="About Duzo | Fine Dining Asian Restaurant in Sharjah" />';				
+				echo '<meta name="description" content="Learn about Duzo\'s passion for Asian cuisine. We blend tradition with modern flavors in the heart of Sharjah." />';				
 				break;
 			case 'contact':
-				echo '<meta name="title" content="Contact Duzo | Dine-In Asian Restaurant in Al Zahia, Dubai" />';				
-				echo '<meta name="description" content="Find Duzo Restaurant\'s location, contact details, and dine-in hours in Dubai. Visit us in Al Zahia today." />';				
+				echo '<meta name="title" content="Contact Duzo | Dine-In Asian Restaurant in Al Zahia, Sharjah" />';				
+				echo '<meta name="description" content="Find Duzo Restaurant\'s location, contact details, and dine-in hours in Sharjah. Visit us in Al Zahia today." />';				
 				break;
 		}
 	}
@@ -722,13 +722,8 @@ if (! function_exists( 'static_dataset_healthy_facts' )) {
 				'icon' => 'content-icon-home-1-512x512.png',
 			],
 			[
-				'title' => 'MEDITERRANEAN TASTE',
-				'description' => 'Enjoy a refreshing twist on tradition with our Mediterranean-inspired options. Light, wholesome, and full of natural flavors—perfect for those seeking vegan, keto, paleo, dairy-free, or gluten-free dishes, all with an Asian flair.',
-				'icon' => 'content-icon-home-3-512x512.png',
-			],
-			[
 				'title' => 'CLEAN & COMFORTING',
-				'description' => 'Our kitchen follows the highest hygiene standards, and our team is committed to warm, attentive service. Duzo isn’t just a place to eat—it’s a place to feel at home.',
+				'description' => 'Our kitchen follows the highest hygiene standards, and our team is committed to warm, attentive service. Duzo isn\'t just a place to eat—it\'s a place to feel at home.',
 				'icon' => 'content-icon-home-4-512x512.png',
 			],
 		];
